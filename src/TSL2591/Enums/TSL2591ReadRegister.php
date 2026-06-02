@@ -1,0 +1,17 @@
+<?php
+
+namespace DeptOfScrapyardRobotics\Sensors\TSL2591\TSL2591\Enums;
+
+enum TSL2591ReadRegister: int
+{
+    case ENABLE_REGISTER = 0x00;
+    case CONTROL_REGISTER = 0x01;
+    case THRESHOLD_LOW_REGISTER = 0x04;
+    case THRESHOLD_HIGH_REGISTER = 0x06;
+    case NO_PERSIST_THRESHOLD_LOW_REGISTER = 0x08;
+    case NO_PERSIST_THRESHOLD_HIGH_REGISTER = 0x0A;
+    case PERSIST_FILTER_REGISTER = 0x0C;
+    case DEVICE_ID_REGISTER = 0x12;
+    case CHANNEL0_LOW_REGISTER = 0x14;
+    case CHANNEL1_LOW_REGISTER = 0x16;
+}
