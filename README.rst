@@ -102,7 +102,7 @@ $native_sensor = TSL2591::connection('native')
     ->i2c(1, TSL2591I2CAddress::DEFAULT->value)
     ->create();
     
-$lux = $native->sensor->lux;
+$lux = $native_sensor->lux;
 
 ```
 
@@ -124,7 +124,7 @@ $usb_sensor = TSL2591::connection('usb')
     
 $als = AmbientLightSensor::as($usb_sensor);
 
-$lux = $tsl2591->getLuminance();
+$lux = $als->getLuminance();
 
 ```
 
@@ -145,7 +145,7 @@ use RealityInterface\Sensors\Applied\AmbientLighting\AmbientLightSensor;
 
 $tsl2591 = AmbientLightSensor::using('tsl2591-native');
 
-// Simulated out of scope event measuring both sensors at the same time
+// Simulated out-of-scope event measuring both sensors at the same time
 $current_lux = $tsl2591->getLuminance();
 $ref = (int) "your-reference-lux";
 
